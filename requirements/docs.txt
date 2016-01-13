@@ -1,6 +1,5 @@
 alabaster==0.7.7
 Babel==2.2.0
-docker-volume==0.1.dev0
 docutils==0.12
 Jinja2==2.8
 lazr.delegates==2.0.3

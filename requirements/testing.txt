@@ -1,7 +1,6 @@
 astroid==1.4.3
 colorama==0.3.6
 detox==0.10.0
-docker-volume==0.1.dev0
 eventlet==0.17.4
 flake8==2.5.1
 greenlet==0.4.9
