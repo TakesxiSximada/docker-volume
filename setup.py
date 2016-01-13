@@ -60,6 +60,7 @@ setup(
     author='TakesxiSximada',
     author_email='sximada@gmail.com',
     url='https://github.com/TakesxiSximada/docker-volume',
+    download_url='https://github.com/TakesxiSximada/docker-volume/archive/master.zip',
     keywords='Docker, VirtualBox',
     packages=find_packages('src', exclude=["*.tests", "*.tests.*", "tests.*", "tests"]),
     package_dir={'': 'src'},

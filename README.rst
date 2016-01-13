@@ -49,9 +49,9 @@ add volume
 .. code-block::
 
    $ docker-volume add dev
-   EXECUTE: VBoxManage sharedfolder add dev --name docker-example_redis --hostpath /Users/sximada/ng/var/src/develop/docker-example/volumes/redis
-   EXECUTE: VBoxManage sharedfolder add dev --name docker-example_mysql --hostpath /Users/sximada/ng/var/src/develop/docker-example/volumes/mysql
-   EXECUTE: VBoxManage sharedfolder add dev --name docker-example_mongo --hostpath /Users/sximada/ng/var/src/develop/docker-example/volumes/mongo
+   EXECUTE: VBoxManage sharedfolder add dev --name docker-example_redis --hostpath /path/to/hostdir/volumes/redis
+   EXECUTE: VBoxManage sharedfolder add dev --name docker-example_mysql --hostpath /path/to/hostdir/volumes/mysql
+   EXECUTE: VBoxManage sharedfolder add dev --name docker-example_mongo --hostpath /path/to/hostdir/volumes/mongo
 
 Mount volume
 ------------
