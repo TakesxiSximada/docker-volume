@@ -41,9 +41,11 @@ class VolumeSettingParser(object):
         path = self.path if path is None else path
         project_name = self.project_name if project_name is None else project_name
 
-        here = os.path.abspath(os.path.dirname(path))
+        kwds = dict(os.environ)
+        kwds['here'] = os.path.abspath(os.path.dirname(path))
+
         tmpl = Template(filename=path)
-        data = yaml.load(tmpl.render(here=here))
+        data = yaml.load(tmpl.render(**kwds))
 
         setting = VolumeSetting()
         setting.set_name(env)
