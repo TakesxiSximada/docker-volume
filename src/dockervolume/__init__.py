@@ -15,4 +15,4 @@ def dummy_for_unittest():
     return 'hello world'
 
 
-__version__ = '0.1.dev0'
+__version__ = '0.1.dev1'
