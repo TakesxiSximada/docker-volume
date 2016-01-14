@@ -36,7 +36,7 @@ def do_docker_machine_ssh(env, *argv):
 
 def sharedfolderctl(env, mode, *argv):
     """VBoxManage sharedfolder add dev --name volumes --hostpath "$PWD/volumes" """
-    cmd = ('VBoxManage', 'sharedfolder', mode, env) + argv
+    cmd = ('VBoxManage', 'sharedfolder', mode, env, '--transient') + argv
     return do_cmd(cmd)
 
 
