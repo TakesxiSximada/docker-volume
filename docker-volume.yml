@@ -1,0 +1,11 @@
+volumes:
+  ham:
+    hostpath: ${here}/volumes/ham
+    vboxpath: /var/lib/docker-volume/ham
+  spam:
+    hostpath: ${here}/volumes/spam
+    vboxpath: /var/lib/docker-volume/spam
+    uid: 0
+    gid: 0
+    dmode: 777
+    fmode: 777
