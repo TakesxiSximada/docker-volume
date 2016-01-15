@@ -48,12 +48,16 @@ if sys.version_info < (3, 4, 0):
 if sys.version_info < (3, 3, 0):
     version_require.append('repoze.lru')
 
+long_description = \
+    read('README.rst') + '\n\n' + \
+    read('CHANGES.rst') + '\n\n' + \
+    read('MAINTENANCE.rst')
 
 setup(
     name='docker-volume',
     version=find_version('src'),
-    description='Docker Volume Utility',
-    long_description=read('README.rst') + '\n\n' + read('CHANGES.rst'),
+    description='Management tool of VirtualBox Volume for Docker',
+    long_description=long_description,
     classifiers=[  # https://pypi.python.org/pypi?%3Aaction=list_classifiers
         "Programming Language :: Python",
     ],

@@ -1,11 +1,11 @@
-docker-volume - Docker Volume Utility
-=====================================
+***************************************************************
+docker-volume - Management tool of VirtualBox Volume for Docker
+***************************************************************
 
-.. image:: https://circleci.com/gh/TakesxiSximada/docker-volume.svg?style=svg
-   :target: https://circleci.com/gh/TakesxiSximada/docker-volume
+It provide function of mounting local directories on the VirtualBox instance
+with mount option. Using Docker Toolbox.
 
-
-INSTALL
+Install
 =======
 
 .. code-block::
@@ -13,13 +13,13 @@ INSTALL
    $ pip install docker-volume
 
 
-HOW TO USE IT
-==============
+How to use it
+=============
 
-configuration
+Configuration
 -------------
 
-$REPO_ROOT/config/volume.yml
+$REPO_ROOT/docker-volume.yml
 
 .. code-block::
 
@@ -43,7 +43,7 @@ $REPO_ROOT/config/volume.yml
        gid: 0
        dmode: 777
 
-add volume
+Add volume
 ----------
 
 .. code-block::
@@ -130,3 +130,8 @@ Volume name
 ===========
 
 Volume name is ${REPOSITORY_DIRECTORY_NAME}_${VOLUME_NAME}.
+
+Development
+===========
+
+Source code repository: https://pypi.python.org/pypi/docker-volume
