@@ -1,4 +1,5 @@
 import os
+import logging
 
 import yaml
 from mako.template import Template
@@ -7,6 +8,8 @@ from zope.component import IFactory
 
 from .volumes import Volume
 from .interfaces import ISetting
+
+_logger = logging.getLogger(__name__)
 
 
 @implementer(ISetting)
