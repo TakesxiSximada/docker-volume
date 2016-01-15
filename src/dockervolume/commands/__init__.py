@@ -10,7 +10,7 @@ from dockervolume.bootstraps import bootstrap
 def main(argv=sys.argv[1:]):
     parser = argparse.ArgumentParser()
     parser.add_argument('cmd', help='add, mount, unmount, remove')
-    parser.add_argument('name', help='docker machine name')
+    parser.add_argument('name', default='default', nargs='?', help='docker machine name', )
     parser.add_argument('--conf', default='docker-volume.yml')
     parser.add_argument('--dry-run', default=False, action='store_true')
     args = parser.parse_args(argv)
