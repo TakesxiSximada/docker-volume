@@ -1,0 +1,8 @@
+ham:
+  image: busybox:latest
+  volumes:
+    - /var/lib/docker-volume-ham:/var/lib/docker-volume:rw
+spam:
+  image: busybox:latest
+  volumes:
+    - /var/lib/docker-volume-spam:/var/lib/docker-volume:rw
