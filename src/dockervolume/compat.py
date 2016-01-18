@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+import os
+from os import makedirs as _makedirs
 import sys
 from sys import version_info
 from six import (
@@ -114,3 +116,13 @@ if PY33_OR_LATER:
     from functools import lru_cache
 else:
     from repoze.lru import lru_cache  # noqa
+
+
+def makedirs_for_py2k(path, *args, **kwds):
+    if kwds.get('exist_ok', None):
+        if not os.path.isdir(path):
+            return _makedirs(*args, **kwds)
+    else:
+        return _makedirs(*args, **kwds)
+
+makedirs = _makedirs if PY3 else makedirs_for_py2k
