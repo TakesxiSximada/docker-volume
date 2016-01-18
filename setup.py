@@ -75,6 +75,7 @@ setup(
     install_requires=[
         'six',
         'mako',
+        'jumon',
         'PyYAML',
         'lazr.delegates',
         'zope.interface',

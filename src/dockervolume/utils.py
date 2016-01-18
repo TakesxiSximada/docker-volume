@@ -37,3 +37,7 @@ def search_docker_compose_dir(pattern='docker-compose.yml'):
 class DummyChild(object):
     def wait(self):
         return 0
+
+
+DEFAULT_MACHINE_NAME = 'default'
+DEFAULT_CONF = 'docker-compose.yml'
