@@ -1,4 +1,7 @@
 volumes:
+  repo:
+    hostpath: ${here}
+    vboxpath: /var/lib/docker-volume
   ham:
     hostpath: ${here}/volumes/ham
     vboxpath: /var/lib/docker-volume/ham

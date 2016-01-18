@@ -1,3 +1,17 @@
+base:
+  build: deploy/docker/base
+app:
+  build: .
+develop:
+  build: deploy/docker/develop
+  working_dir: /srv/docker-volume/repo
+  volumes:
+    - /var/lib/docker-volume:/srv/docker-volume/repo:rw
+testing:
+  build: deploy/docker/testing
+  working_dir: /srv/docker-volume/repo
+  volumes:
+    - /var/lib/docker-volume:/srv/docker-volume/repo:rw
 ham:
   image: busybox:latest
   volumes:
