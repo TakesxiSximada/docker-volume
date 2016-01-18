@@ -7,7 +7,7 @@ class FileSearchTest(TestCase):
         import shutil
         import tempfile
         from ..utils import search_file
-        path = tempfile.makedtemp()
+        path = tempfile.mkdtemp()
         try:
             work_dir = os.path.join(path, 'a/b/c/d')
             os.makedirs(work_dir, exist_ok=True)
@@ -24,7 +24,7 @@ class FileSearchTest(TestCase):
         import shutil
         import tempfile
         from ..utils import search_file
-        path = tempfile.makedtemp()
+        path = tempfile.mkdtemp()
         try:
             work_dir = os.path.join(path, 'a/b/c/d')
             os.makedirs(work_dir, exist_ok=True)
