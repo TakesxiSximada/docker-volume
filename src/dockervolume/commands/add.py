@@ -13,19 +13,19 @@ from dockervolume.utils import (
 
 def main(argv=sys.argv[1:]):
     parser = argparse.ArgumentParser()
-    parser.add_argument('name', default=DEFAULT_CONF, nargs='?', help='docker machine name', )
-    parser.add_argument('--conf', default=DEFAULT_MACHINE_NAME)
+    parser.add_argument('name', default=DEFAULT_MACHINE_NAME, nargs='?', help='docker machine name')
+    parser.add_argument('--conf', default=DEFAULT_CONF)
     parser.add_argument('--dry-run', default=False, action='store_true')
     args = parser.parse_args(argv)
 
-    cmd = args.cmd
+    name = args.name
     conf = search_docker_voluem_yml(args.conf)
     dry_run = args.dry_run
 
     setup_logging()
-    registry = bootstrap(name='add', conf=conf, dry_run=dry_run)
+    registry = bootstrap(name=name, conf=conf, dry_run=dry_run)
     execute = VolumeCommand(registry)
-    execute(cmd)
+    execute('add')
 
 if __name__ == '__main__':
     sys.exit(main())

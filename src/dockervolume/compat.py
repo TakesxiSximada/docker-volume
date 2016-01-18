@@ -120,6 +120,7 @@ else:
 
 def makedirs_for_py2k(path, *args, **kwds):
     if kwds.get('exist_ok', None):
+        del kwds['exist_ok']
         if not os.path.isdir(path):
             return _makedirs(*args, **kwds)
     else:

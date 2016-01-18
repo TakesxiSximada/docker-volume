@@ -50,4 +50,4 @@ class DummyChild(object):
 
 
 DEFAULT_MACHINE_NAME = 'default'
-DEFAULT_CONF = 'docker-compose.yml'
+DEFAULT_CONF = 'docker-volume.yml'
