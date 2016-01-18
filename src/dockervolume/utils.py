@@ -3,10 +3,20 @@ import glob
 
 
 def enclose_in_double_quote(word):
+    """Enclose in duble quote
+
+    >>> enclose_in_double_quote('para meter')
+    '"para meter"'
+    >>> enclose_in_double_quote('parameter')
+    'parameter'
+    """
     return '"{}"'.format(word) if ' ' in word else word
 
 
 def search_file(pattern, directory=None):
+    """Seach a file want to hit the pattern while it climbed
+
+    """
     if directory is None:
         directory = os.getcwd()
     before = None
