@@ -6,11 +6,15 @@ class FileSearchTest(TestCase):
         import os
         import shutil
         import tempfile
-        from ..utils import search_file
+        from ..utils import (
+            makedirs,
+            search_file,
+            )
+
         path = tempfile.mkdtemp()
         try:
             work_dir = os.path.join(path, 'a/b/c/d')
-            os.makedirs(work_dir, exist_ok=True)
+            makedirs(work_dir, exist_ok=True)
             target_file = os.path.abspath(os.path.join(path, 'TARGETFILE'))
             with open(target_file, 'w+b') as fp:
                 fp.write('dummy'.encode())
@@ -23,11 +27,14 @@ class FileSearchTest(TestCase):
         import os
         import shutil
         import tempfile
-        from ..utils import search_file
+        from ..utils import (
+            makedirs,
+            search_file,
+            )
         path = tempfile.mkdtemp()
         try:
             work_dir = os.path.join(path, 'a/b/c/d')
-            os.makedirs(work_dir, exist_ok=True)
+            makedirs(work_dir, exist_ok=True)
             ans = search_file('TARGETFILE', work_dir)
             self.assertIsNone(None, ans)
         finally:
