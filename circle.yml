@@ -20,7 +20,7 @@ test:
     - pip install -U coveralls
     - pyenv local $TOX_PY35 $TOX_PY34 $TOX_PY33 $TOX_PY32 $TOX_PY27 $TOX_PY26 $TOX_PYPY
   override:
-    - detox -v
+    - tox -v
     - for LOGFILE in `ls .tox/*/log/*.log`; do cowsay $LOGFILE; cat $LOGFILE; done
     - nosetests --with-coverage
     - COVERALLS_REPO_TOKEN=$COVERALLS_REPO_TOKEN coveralls
