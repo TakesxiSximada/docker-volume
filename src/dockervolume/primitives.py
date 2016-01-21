@@ -51,9 +51,13 @@ def remove_volume(env, name, **kwds):
     return sharedfolderctl(env, 'remove', '--name', name)
 
 
-def mount_volume(env, name, vboxpath, uid=None, gid=None, dmode=None, fmode=None, **kwds):
-    """docker-machine ssh dev "sudo mount -t vboxsf -o uid=0,gid=0 volumes $PWD/volume" """
+def mount_volume(
+        env, name, vboxpath, uid=None, gid=None,
+        dmode=None, fmode=None, **kwds):
+    """Mount volume on the docker machine using docker-machine ssh
 
+    docker-machine ssh dev "sudo mount -t vboxsf -o uid=0,gid=0 volumes $PWD/volume"
+    """
     option_params = []
     if uid is not None:
         option_params.append('uid={}'.format(uid))
