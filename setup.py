@@ -50,8 +50,7 @@ if sys.version_info < (3, 3, 0):
 
 long_description = \
     read('README.rst') + '\n\n' + \
-    read('CHANGES.rst') + '\n\n' + \
-    read('MAINTENANCE.rst')
+    read('CHANGES.rst') + '\n\n'
 
 setup(
     name='docker-volume',
