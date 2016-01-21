@@ -5,6 +5,9 @@ docker-volume - Management tool of VirtualBox Volume for Docker
 It provide function of mounting local directories on the VirtualBox instance
 with mount option. Using Docker Toolbox.
 
+.. image:: https://circleci.com/gh/TakesxiSximada/docker-volume.svg?style=svg
+   :target: https://circleci.com/gh/TakesxiSximada/docker-volume
+
 Install
 =======
 
