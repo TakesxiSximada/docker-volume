@@ -35,10 +35,6 @@ def search_docker_voluem_yml(pattern='docker-volume.yml'):
     return search_file(pattern=pattern)
 
 
-def search_docker_compose_yml(pattern='docker-compose.yml'):
-    return search_file(pattern=pattern)
-
-
 def search_docker_compose_dir(pattern='docker-compose.yml'):
     yml_path = search_file(pattern=pattern)
     return os.path.dirname(yml_path) if yml_path else None
