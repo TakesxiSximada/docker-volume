@@ -1,3 +1,4 @@
+import os
 import logging
 import subprocess
 
@@ -81,3 +82,15 @@ def unmount_volume(env, name, vboxpath, **kwds):
     """docker-machine ssh dev "sudo umount $vboxpath" """
     return do_docker_machine_ssh(
         env, 'sudo umount {}'.format(vboxpath))
+
+
+def make_directory(env, name, directory, **kwds):
+    directories = directory
+    registry = get_registry()
+    setting = registry.queryUtility(ISetting)
+    if directories is not None:
+        for dir_path in directories:
+            _logger.info('CREATE DIRECTORY: %s', dir_path)
+            if not setting.dry_run:
+                os.makedirs(dir_path, exist_ok=True)
+    return DummyChild()
