@@ -15,6 +15,7 @@ from .primitives import (
     mount_volume,
     unmount_volume,
     remove_volume,
+    make_directory,
     )
 from .operations import VolumeOperation
 
@@ -36,6 +37,7 @@ def bootstrap(name, conf, dry_run):
         setting.set_dry_run()
 
     reg.registerUtility(setting, ISetting)
+    reg.registerUtility(VolumeOperation(make_directory), IOperation, 'directory')
     reg.registerUtility(VolumeOperation(add_volume), IOperation, 'add')
     reg.registerUtility(VolumeOperation(mount_volume), IOperation, 'mount')
     reg.registerUtility(VolumeOperation(unmount_volume), IOperation, 'unmount')

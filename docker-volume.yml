@@ -5,6 +5,8 @@ volumes:
   ham:
     hostpath: ${here}/volumes/ham
     vboxpath: /var/lib/docker-volume/ham
+    directory:
+      - ${here}/volumes/ham
   spam:
     hostpath: ${here}/volumes/spam
     vboxpath: /var/lib/docker-volume/spam
@@ -12,3 +14,5 @@ volumes:
     gid: 0
     dmode: 777
     fmode: 777
+    directory:
+      - ${here}/volumes/spam
