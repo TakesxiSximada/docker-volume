@@ -1,8 +1,10 @@
 .PHONY: package test-package test-docker test-docker-dry-run
 
 package:
-	python setup.py register
 	python setup.py sdist bdist_wheel upload
+
+package-register:
+	python setup.py register
 
 test-docker:
 	docker-volume add
