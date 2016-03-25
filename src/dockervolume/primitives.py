@@ -1,4 +1,3 @@
-import os
 import logging
 import subprocess
 
@@ -7,8 +6,10 @@ from .utils import (
     enclose_in_double_quote,
     DummyChild,
     )
+
 from .interfaces import ISetting
 from .registries import get_registry
+from .compat import makedirs
 
 _logger = logging.getLogger()
 
@@ -92,5 +93,5 @@ def make_directory(env, name, directory, **kwds):
         for dir_path in directories:
             _logger.info('CREATE DIRECTORY: %s', dir_path)
             if not setting.dry_run:
-                os.makedirs(dir_path, exist_ok=True)
+                makedirs(dir_path, exist_ok=True)
     return DummyChild()
