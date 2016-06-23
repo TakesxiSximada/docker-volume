@@ -46,4 +46,8 @@ class DummyChild(object):
 
 
 DEFAULT_MACHINE_NAME = 'default'
-DEFAULT_CONF = 'docker-volume.yml'
+DEFAULT_VOLUME_YML = 'docker-volume.yml'
+DEFAULT_COMPOSE_YML = 'docker-compose.yml'
+
+
+DEFAULT_CONF = DEFAULT_VOLUME_YML  # duprecated to DEFAULT_VOLUME_YML
