@@ -1,2 +1,2 @@
-[git-pr-release]
-    staging = develop
+[pr-release "branch"]
+	staging = develop
