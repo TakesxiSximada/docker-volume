@@ -20,8 +20,8 @@ from .primitives import (
 from .operations import VolumeOperation
 
 
-def bootstrap(name, conf, dry_run):
-    docker_compose_dir = search_docker_compose_dir()
+def bootstrap(name, conf, compose_yml, dry_run):
+    docker_compose_dir = search_docker_compose_dir(compose_yml)
     if docker_compose_dir is None:
         raise NoConfigurationError('Configuration file not found: {}'.format(conf))
     docker_compose_name = os.path.basename(docker_compose_dir)

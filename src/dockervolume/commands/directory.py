@@ -31,7 +31,7 @@ def main(argv=sys.argv[1:]):
     registry = bootstrap(
         name=machine, conf=conf, compose_yml=compose_yml, dry_run=dry_run)
     execute = VolumeCommand(registry)
-    execute('unmount', *volumes)
+    execute('directory', *volumes)
 
 if __name__ == '__main__':
     sys.exit(main())
