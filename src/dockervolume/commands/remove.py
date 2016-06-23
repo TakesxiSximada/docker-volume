@@ -6,6 +6,7 @@ from dockervolume.core import VolumeCommand
 from dockervolume.bootstraps import bootstrap
 from dockervolume.utils import (
     DEFAULT_VOLUME_YML,
+    DEFAULT_COMPOSE_YML,
     DEFAULT_MACHINE_NAME,
     search_docker_voluem_yml,
     )
