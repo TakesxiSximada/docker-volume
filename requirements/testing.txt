@@ -16,7 +16,7 @@ pluggy==0.3.1
 py==1.4.31
 pyflakes==1.0.0
 pylint==1.5.3
-PyYAML==3.11
+PyYAML==5.1
 selenium==2.48.0
 six==1.10.0
 tox==2.3.1
