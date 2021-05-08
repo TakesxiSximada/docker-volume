@@ -1,7 +1,7 @@
 astroid==1.4.3
 colorama==0.3.6
 detox==0.10.0
-eventlet==0.17.4
+eventlet==0.31.0
 flake8==2.5.1
 greenlet==0.4.9
 lazr.delegates==2.0.3
