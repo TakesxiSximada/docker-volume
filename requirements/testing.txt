@@ -6,7 +6,7 @@ flake8==2.5.1
 greenlet==0.4.9
 lazr.delegates==2.0.3
 lazy-object-proxy==1.2.1
-Mako==1.0.3
+Mako==1.2.2
 MarkupSafe==0.23
 mccabe==0.3.1
 mypy-lang==0.2.0
